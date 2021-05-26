@@ -1,0 +1,92 @@
+<app-header></app-header>
+<app-intro></app-intro>
+<div class="section" id="contacto">
+    <div class="cc-contact-information" style="background-image: url('');">
+        <div class="container">
+            <div class="cc-contact">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="card mb-0" data-aos="zoom-in">
+                            <div class="h4 text-center title">Contactarme</div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <form name="form" (ngSubmit)="f.form.valid ; f.resetForm()" #f="ngForm" novalidate>
+                                            <div class="p pb-3">
+                                                <strong>Sigamos en contacto </strong>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-user-circle"></i>
+                                                        </span>
+                                                        <input class="form-control" type="text" name="name" placeholder="Nombre"
+                                                        [(ngModel)]="model.name" #name="ngModel"
+                                                        [ngClass]="{ 'is-invalid': f.submitted && name.invalid}" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-file-text"></i>
+                                                        </span>
+                                                        <input class="form-control" type="text" name="subject" placeholder="Asunto"
+                                                        [(ngModel)]="model.subject" #subject="ngModel"
+                                                        [ngClass]="{ 'is-invalid': f.submitted && subject.invalid }" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-envelope"></i>
+                                                        </span>
+                                                        <input class="form-control" type="text" name="email" placeholder="Correo Electrónico"
+                                                        [(ngModel)]="model.email" #email="ngModel"
+                                                        [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                                                        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" name="message" placeholder="Aquí va tu mensaje... "
+                                                        [(ngModel)]="model.message" #message="ngModel"
+                                                        [ngClass]="{ 'is-invalid': f.submitted && message.invalid }" required></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <button class="btn btn-primary" type="submit">Enviar</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <p class="mb-0">
+                                            <strong>Teléfono</strong>
+                                        </p>
+                                        <p class="pb-2">+52 5610183216</p>
+                                        <p class="mb-0">
+                                            <strong>Correo Electrónico</strong>
+                                        </p>
+                                        <p>upt.carlos.b.lucas.a@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
